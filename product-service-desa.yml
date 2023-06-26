@@ -1,1 +1,6 @@
-MI PRIMER ARCHIVO A SUBIR
+server:
+  port: 9001
+
+encrypt:
+  key: mitocode-secrets
+  value: '{cipher}e53741398c4ab6b709362860322119b683ba7e8662ea2d83660666bb75d79537'
