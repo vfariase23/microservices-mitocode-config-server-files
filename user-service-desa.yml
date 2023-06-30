@@ -1,0 +1,18 @@
+server:
+  port: ${CUSTOM.SERVER.PORT:9004}
+
+eureka:
+  client:
+    fetchRegistry: true
+    registerWithEureka: true
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
+
+### Mongo database configuration
+spring:
+  data:
+    mongodb:
+      uri: mongodb://mitocode:mitocode@localhost:27017/mitocodedb?authSource=admin
+
+encrypt:
+  key: mitocode
