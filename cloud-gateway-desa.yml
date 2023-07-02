@@ -10,16 +10,32 @@ eureka:
 
 
 # Cloud Gateway Routes
-
 spring:
   cloud:
     gateway:
-      routes:
-        -id: user-service-data
-         uri: lb://user-service #hace refrencia al id del user service en el microservicio
-         predicates:
-          -Path=/api/user-service/** #lo deriva al user service
+      routes: 
+        - id: user-service
+          uri: lb://user-service
+          predicates:
+            - Path=/api/user-service/**
           filters:
-           - StripPrefix = 3 #significa tomar como base estos 3 /api/user-service/**  1/2/3, es decir la posiciones que representaa
+            - StripPrefix=2
+
+
+
+
+
+
+
+#spring:
+#  cloud:
+#    gateway:
+#      routes:
+#        -id: user-service-data
+#         uri: lb://user-service #hace refrencia al id del user service en el microservicio
+#         predicates:
+#          -Path=/api/user-service/** #lo deriva al user service
+#          filters:
+#           - StripPrefix = 3 #significa tomar como base estos 3 /api/user-service/**  1/2/3, es decir la posiciones que representaa
 
 
