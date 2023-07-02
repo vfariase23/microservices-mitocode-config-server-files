@@ -20,6 +20,6 @@ spring:
          predicates:
           -Path=/api/user-service/** #lo deriva al user service
           filters:
-            -StripPrefix=3 #significa tomar como base estos 3 /api/user-service/**  1/2/3, es decir la posiciones que representaa
+           - StripPrefix = 3 #significa tomar como base estos 3 /api/user-service/**  1/2/3, es decir la posiciones que representaa
 
 
