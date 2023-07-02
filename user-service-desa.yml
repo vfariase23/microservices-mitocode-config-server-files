@@ -16,3 +16,22 @@ spring:
 
 encrypt:
   key: mitocode
+
+
+# Actuator configuration
+info:
+  app:
+    name: User Service Microservice
+    description: Módulo de la arquitectura que disponibiliza información de los usuarios
+    version: 1.0
+
+#habilita los endpoints
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+      base-path: /actuator
+  info:
+    env:
+      enabled: true
